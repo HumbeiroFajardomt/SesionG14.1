@@ -7,8 +7,27 @@ function callback() {
     console.log("Server is working...Continue");
 }
 
+const datosVarios = { 
+    nombre: "Chapulin",
+    edad: 65,
+    sobrenombre: "Gomez Bolaños",
+    //Array 
+    "comidas Favoritas": [`
+  
+        arequipe,
+        arepa,
+        embuelto
+        `
+    ],
+    trabajos: {
+        categoria:"escultor",
+        tipo: "Manual",
+        horario : "Diurno"
+    }
+}
+
 app.get("/",(req, res) => {
-    res.send("Hola New Day!!!")
+    res.json(datosVarios);
 })
 
 app.get("/inicio",(req, res) => {
